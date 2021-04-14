@@ -1,24 +1,3 @@
-let tl = gsap.timeline({ repeat: -1, yoyo: true });
-
-tl.from('.img', {
-    duration: 2,
-    height: 200,
-    width: 300,
-   
-    ease: 'linear'
-    
-});
-let ty = gsap.timeline({ repeat: -1, yoyo: true });
-
-ty.from('.title', {
-    duration: 1,
-    opacity:0,
-   
-    ease: 'linear'
-    
-});
-
-
 window.sr = ScrollReveal();
     distancia = 2000;
     distanciaCorta = 1000;

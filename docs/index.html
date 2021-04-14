@@ -11,7 +11,65 @@
 
 <body>
    
+    <style>
 
+        *, *::after,*::before{
+            margin: 0;  
+            padding: 0;
+            -webkit-box-sezing: border-box;
+            -moz-box-sezing: border-box;
+            box-sezing: border-box;
+        }
+        #barracarga{
+            background-color:rgb(255, 255, 255);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            -webkit-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+            z-index:1000;
+        }
+    
+        #cargando{
+            border: 15px solid #ccc;
+            border-top-color: rgb(151, 150, 150);
+            border-radius: 100%;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top:0px;
+            bottom:0px;
+            left:0px;
+            right: 0px;
+            margin:auto;
+            -webkit-animation: rotate  2s linear infinite;
+            animation: rotate  2s linear infinite;
+        }
+        @-webkit-keyframes rotate  {
+            from {-webkit-transform: rotate(0deg);}
+            to {-webkit-transform: rotate(360deg);}
+        }
+    
+    </style>
+    
+    <div id="barracarga"> 
+        
+        <div id="cargando"></div>
+    
+    </div>
+    
+    <script>
+       window.onload = function(){
+          
+            var contenedor = document.getElementById('barracarga');
+            
+            contenedor.style.visibility = 'hidden';
+            
+            contenedor.style.opacity = '0'
+       }
+    </script>
+    
 
     <div id="container">
       
@@ -25,7 +83,7 @@
                 </script>
                 <div>
                 </div>
-                <h1 class="animacion-1"> Hoy es un dia peculiar... </h1> <br><br><br><br><br><br><br>
+                <h1 class="entrada animacion-1"> Hoy es un dia peculiar... </h1>
                 <h2 class="inicio-h1 animacion-2">Hay algo que te quiero mostrar mi niña especial</h2>
                 <h2 class="inicio-h1 animacion-3"> es hora de comenzar</h2>
                 <h2 class="inicio-h1 animacion-4">¿estas lista para esto?</h2>     
@@ -34,7 +92,7 @@
                     <span class="animacion-6">2..</span>
                     <span class="animacion-7">1..</span>
                 </p>
-                <a onclick="cambiar()" id="play"><img src="img/corazonv2.png" class="animacion-8 img " ></a> 
+                <a onclick="cambiar()" id="play"><img src="img/corazon.png" class="animacion-8 img " ></a> 
 
                 </script>              
             </center>
@@ -44,7 +102,7 @@
         <div class="saludo2">
 
             <center>
-                <h1 class="title" style="">Nuesta historia de amor ;3 <br>  <br></h1>
+                <h1 class="title">Nuesta historia de amor ;3 <br>  <br></h1>
             </center>
             <h2  class=""> <span class="typed "></span> </h2>
         </div>
@@ -120,7 +178,7 @@
                         frase2_9,frase2_10,frase2_11,frase2_12,
                         frase3_1, frase3_2, frase3_3, frase3_4, frase3_5, frase3_6, frase3_7
                     ],
-                typeSpeed: 60,
+                typeSpeed: 40,
                 startDelay:2000,
                 cursorChar: '<3',
             });
